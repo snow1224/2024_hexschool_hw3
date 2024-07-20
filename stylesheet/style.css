@@ -1,0 +1,323 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+nav{
+  background-color: #AA0601;
+  padding: 16px 0;
+  
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+footer{
+  background-color: #AA0601;
+}
+
+h1{
+  font-size: 64px;
+}
+
+h2{
+  font-size: 48px;
+}
+
+h3{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* 第1週的 */
+/* .container {
+    width: 1296px;
+    margin:0 auto;
+} */
+.container {
+    /* 1296 + 12 + 12 = 1320 ，這樣子 container 內層能容納的最大寬度才會是 1296px */
+    max-width: 1320px;
+    margin: 0 auto;
+    /* 左右 padding */
+    padding: 0 12px;
+    @media (max-width: 768px) {
+      max-width: 720px;
+      padding: 0 0;
+    }
+    @media (max-width: 372px) {
+      max-width: 372px;
+      padding: 0 0;
+    }
+  }
+.navbar-wrap {
+  display: flex;
+    justify-content: space-between;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+  }
+
+.navbar-logo {
+    width: 80px;
+    
+    @media (max-width: 768px) {
+      margin: 0 0 16px 16px;
+    }
+  }
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+.navbar-item {
+    height: 100%;
+    
+    @media (max-width: 768px) {
+      width: 50%;
+      margin-right: 0px;
+      border: 1px solid #ffffff;
+    }
+}
+
+.navbar-link {
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 9px 32px;
+    text-decoration: none;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+      text-align: center;
+      padding: 12px 0;
+    }
+  }
+  
+.navbar-link:hover {
+    opacity: 0.7;
+}
+  
+.navbar-item:last-child .navbar-link {
+    padding-right: 16px;
+}
+
+.header-content{
+  padding: 300px 16px;
+}
+
+.text-dark{
+  color: #000;
+}
+
+.text-secondary{
+  color: #FBF2F2;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-primary{
+  color: #AA0601;
+}
+
+.text-dark-red{
+  color: #650300;
+}
+
+.bg-secondary{
+  background-color: #FBF2F2;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-end{
+  text-align: right;
+}
+
+.fs-bold{
+  font-weight: bold;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.btn{
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.btn-primary{
+  background-color: #AA0601;
+  border: #AA0601 solid 1px;
+}
+
+.btn-primary:hover{
+  background-color: white;
+  color:#AA0601;
+}
+
+.sitemap ul{
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sitemap ul li a{
+	text-decoration: none;
+	margin: 12px 24px;
+}
+
+.links ul{
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.links ul li a{
+	text-decoration: none;
+	margin: 24px 16px;
+}
+.links ul li a img{
+    width: 32px;
+    height: 32px;
+}
+
+footer .concact_info p{
+    font-size: 36px;
+}
+
+.copyright{
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.copyright  ul{
+    display: flex;
+}
+
+.copyright  ul li a{
+	text-decoration: none;
+	margin: 24px 24px;
+  font-size: 14px;
+}
+
+.copyright  ul li a:last-child{
+  margin-right: 16px;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .container {
+      max-width: 720px;
+      margin:0 auto;
+    }
+  }
+  @media (max-width: 375px) {
+    .copyright  ul {
+        display: block;
+    }
+    .container {
+      max-width: 372px;
+      margin:0 auto;
+    }
+  }
+  
+  .header-img{
+    background-image: url("/imgs/home-header.png");
+    background-size: cover;
+  	background-repeat: no-repeat;
+    @media(max-width: 768px){
+      background-image: url("/imgs/home-header-sm.png");
+    }
+  }
+
+  .w-50{
+    width: 50%;
+  }
+
+  .ml-auto{
+    margin-left: auto;
+  }
