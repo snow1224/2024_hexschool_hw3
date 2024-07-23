@@ -335,7 +335,7 @@ input[type="checkbox"]::after{
 }
 
 .sitemap ul{
-	margin-top: 40px;
+	padding-top: 40px;
 	display: flex;
 	justify-content:space-between;
 }
