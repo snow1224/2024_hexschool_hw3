@@ -50,6 +50,10 @@ table {
     box-sizing: border-box;
   }
 
+/*
+ 思源體粗細參考
+ https://blog.user.today/notosans-tc-css-font-weight/
+*/
 body {
     font-family: "Roboto", "Noto Sans TC", sans-serif;
     line-height: 1.5;
@@ -85,6 +89,60 @@ h2{
 h3{
   font-size: 36px;
   font-weight: 400;
+}
+
+h4{
+  font-size: 20px;
+}
+
+label{
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+/*source: 
+  1. https://codepen.io/snow1224/pen/QWXEVGM
+  2. https://codepen.io/beforesemicolon/pen/VwaWagB
+*/
+input, textarea{
+  background:none;
+  border: black 1px solid;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}
+
+input::placeholder, textarea::placeholder{
+  color:#000;
+  /*https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity*/
+  opacity: 0.2;
+  font-weight: 400;
+}
+
+textarea{
+  min-height: 136px;
+}
+
+/*source:
+https://blog.csdn.net/mChales_Liu/article/details/119871557
+*/
+input[type="checkbox"] {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+input[type="checkbox"]::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;;
+  height: 16px;;
+  background-color: #FBF2F2;
+  border: 2px solid black;
+  box-sizing: border-box;
+  margin-right: 4px;
 }
 
 /* 第1週的 */
@@ -291,24 +349,57 @@ h3{
   margin-left: 0;
 }
 
+/* .links{
+  @media(max-width:375px){
+    width: 50%;
+  }
+} */
+
 .links ul{
 	margin-top: 40px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+  @media(max-width: 375px){
+    margin-top: 24px;
+  }
 }
 
 .links ul li a{
 	text-decoration: none;
 	margin: 24px 16px;
+  @media(max-width:375px){
+    margin: 24px 8px;
+  }
 }
 .links ul li a img{
     width: 32px;
     height: 32px;
+    @media(max-width:375px){
+      width: 24px;
+      height: 24px;
+    }
+}
+
+.concact_info p{
+  @media(max-width: 375px){
+    display: flex;
+    padding-left: 12px;
+  }
+}
+
+.concact_info{
+  @media(max-width:375px){
+    width: 40%;
+    padding-top: 24px;
+  }
 }
 
 footer .concact_info p{
     font-size: 36px;
+    @media(max-width: 375px){
+      font-size: 16px;
+    }
 }
 
 .copyright{
@@ -484,6 +575,12 @@ footer .concact_info p{
     width: 50%;
   }
 
+  .w-md-80{
+    @media(max-width: 768px){
+      width: 80%;
+    }
+  }
+
   .w-md-100{
     @media(max-width: 768px){
       width: 100%;
@@ -492,6 +589,12 @@ footer .concact_info p{
 
   .w-100{
     width: 100% !important;
+  }
+
+  .w-sm-100{
+    @media(max-width: 375px){
+      width: 100%;
+    }
   }
 
   .w-25{
@@ -532,6 +635,10 @@ footer .concact_info p{
     margin-bottom: 0px !important;
   }
 
+  .mb-24{
+    margin-bottom: 24px;
+  }
+
   .mb-32{
     margin-bottom: 32px;
   }
@@ -542,6 +649,11 @@ footer .concact_info p{
 
   .mb-md-24{
     @media(max-width: 768px){
+      margin-bottom: 24px;
+    }
+  }
+  .mb-sm-24{
+    @media(max-width: 375px){
       margin-bottom: 24px;
     }
   }
