@@ -257,14 +257,15 @@ input[type="checkbox"]::after{
 }
 
 .bg-joint{
-  background-image: url("/imgs/index-bg.png");
+  background-image: url("./imgs/index-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   @media(max-width: 768px){
-    background-image: url("/imgs/index-bg-md.png");
+    background-image: url("./imgs/index-bg-md.png");
   }
+  
   @media(max-width: 375px){
-    background-image: url("/imgs/index-bg-sm.png");
+    background-image: url("./imgs/index-bg-sm.png");
   }
 }
 
@@ -454,11 +455,11 @@ footer .concact_info p{
   }
   
   .header-img{
-    background-image: url("/imgs/home-header.png");
+    background-image: url("./imgs/home-header.png");
     background-size: cover;
   	background-repeat: no-repeat;
     @media(max-width: 768px){
-      background-image: url("/imgs/home-header-sm.png");
+      background-image: url("./imgs/home-header-sm.png");
     }
   }
 
