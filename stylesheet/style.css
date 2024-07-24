@@ -137,12 +137,30 @@ input[type="checkbox"]::after{
   position: absolute;
   left: 0;
   top: 0;
-  width: 16px;;
-  height: 16px;;
+  width: 16px;
+  height: 16px;
   background-color: #FBF2F2;
   border: 2px solid black;
   box-sizing: border-box;
   margin-right: 4px;
+}
+
+/*勾選後的處理*/
+input[type="checkbox"]:checked::after{
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  color:white;
+  background-color: #650300;
+  border:none;
+  outline: none;
 }
 
 /* 第1週的 */
@@ -157,14 +175,25 @@ input[type="checkbox"]::after{
     /* 左右 padding */
     padding: 0 12px;
     @media (max-width: 768px) {
-      max-width: 768px;
-      padding: 0 12px;
+      /* 12*36+11*24+24 = 720 */
+      max-width: 720px;
     }
-    @media (max-width: 372px) {
+    @media (max-width: 375px) {
       max-width: 372px;
-      padding: 0 0;
     }
   }
+.container-sm-fluid{
+  max-width: 1320px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    max-width: 360px;
+    /* 336+24 */
+  }
+  @media (max-width: 375px) {
+    max-width: 372px;
+  }
+}
+
 .navbar-wrap {
   display: flex;
     justify-content: space-between;
@@ -441,20 +470,9 @@ footer .concact_info p{
   align-items: center !important;
 }
 
-@media (max-width: 768px) {
-    .container {
-      /* 12*36+11*24+24 = 720 */
-      max-width: 720px; 
-      margin:0 auto;
-    }
-  }
   @media (max-width: 375px) {
     .copyright  ul {
         display: block;
-    }
-    .container {
-      max-width: 375px;
-      margin:0 auto;
     }
   }
   
@@ -482,15 +500,12 @@ footer .concact_info p{
   }
   @media (max-width: 768px) {
     .card-section{
-      padding: 0 36px;
+      padding: 0 12px;
     }
   }
   @media (max-width: 375px) {
     .card{
       margin-right: 0;
-    }
-    .card-section{
-      padding: 0 36px;
     }
   }
   .card img{
@@ -545,12 +560,9 @@ footer .concact_info p{
     height: auto/ 100%;
     padding:0 12px;
     @media (max-width: 768px) {
-      padding:24 24px;
-    }
-    @media (max-width: 375px) {
-      width: 100%;
       padding:0 0;
     }
+
   }
 
   .img-card-title{
@@ -680,7 +692,7 @@ footer .concact_info p{
   }
 
   .p-md-0{
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       padding: 0 0;
     }
   }
