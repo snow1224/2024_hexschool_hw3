@@ -619,6 +619,10 @@ footer .concact_info p{
     margin-left: auto;
   }
 
+  .mr-0{
+    margin-right: 0;
+  }
+
   .mr-md-0{
     @media(max-width: 768px){
       margin-right: 0;
