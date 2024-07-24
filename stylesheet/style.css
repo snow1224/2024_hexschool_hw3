@@ -298,7 +298,6 @@ input[type="checkbox"]::after{
 }
 
 .d-sm-none{
-  display: block;
   @media(max-width: 375px){
     display: none;
   }
@@ -438,9 +437,14 @@ footer .concact_info p{
   align-items: start !important;
 }
 
+.align-item-center{
+  align-items: center !important;
+}
+
 @media (max-width: 768px) {
     .container {
-      max-width: 768px;
+      /* 12*36+11*24+24 = 720 */
+      max-width: 720px; 
       margin:0 auto;
     }
   }
