@@ -1,0 +1,126 @@
+/*
+ 思源體粗細參考
+ https://blog.user.today/notosans-tc-css-font-weight/
+*/
+body {
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+nav{
+  background-color: #AA0601;
+  padding: 16px 0;
+  
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+footer{
+  background-color: #AA0601;
+}
+
+h1{
+  font-size: 64px;
+  @media(max-width: 575px){
+    font-size: 24px;
+  }
+}
+
+h2{
+  font-size: 48px;
+  @media(max-width: 575px){
+    font-size: 24px;
+  }
+}
+
+h3{
+  font-size: 36px;
+  @media(max-width: 575px){
+    font-size: 16px;
+  }
+}
+
+h4{
+  font-size: 20px;
+  @media(max-width: 575px){
+    font-size: 16px;
+  }
+}
+
+label{
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+/*source: 
+  1. https://codepen.io/snow1224/pen/QWXEVGM
+  2. https://codepen.io/beforesemicolon/pen/VwaWagB
+*/
+input, textarea{
+  background:none;
+  border: black 1px solid;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}
+
+input::placeholder, textarea::placeholder{
+  color:#000;
+  /*https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity*/
+  opacity: 0.2;
+}
+
+textarea{
+  min-height: 136px;
+}
+
+/*source:
+https://blog.csdn.net/mChales_Liu/article/details/119871557
+*/
+input[type="checkbox"] {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+input[type="checkbox"]::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #FBF2F2;
+  border: 2px solid black;
+  box-sizing: border-box;
+  margin-right: 4px;
+}
+
+/*勾選後的處理*/
+input[type="checkbox"]:checked::after{
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  color:white;
+  background-color: #650300;
+  border:none;
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
