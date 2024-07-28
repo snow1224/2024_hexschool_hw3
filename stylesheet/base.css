@@ -124,3 +124,10 @@ input[type="checkbox"]:checked::after{
 button{
   cursor: pointer;
 }
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:#650300;
+}
