@@ -424,7 +424,7 @@ footer .concact_info p {
 
 .img-card-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 900;
   font-style: italic;
 }
@@ -488,8 +488,61 @@ footer .concact_info p {
   }
 }
 
+/*格線系統*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* 抵銷最左邊和最右邊的 col 多出來的 padding */
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.col{
+  flex: 1 0 0%;
+}
+
+/* 一個元素佔 3 欄，格線系統總共是 12 欄， 12 / 3 可分成 4 等份 */
+.col-3{
+	/* 100% / 4 */
+  width: 25%;
+  padding-left: 12px;
+  padding-right: 12px;
+  @media(max-width: 768px){
+    width: 50%;
+  }
+  @media(max-width: 575px){
+    width: 100%;
+  }
+}
+
+.col-4{
+	/* 100% / 4 */
+  width: 33.33%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (max-width: 768px){
+  .col-md-6{
+    width: 50%;
+  }
+  .col-md-12{
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px){
+  .col-sm-12{
+    width: 100%;
+  }
+}
+
 .ml-auto {
   margin-left: auto;
+}
+
+.mx-auto{
+  margin: 0 auto;
 }
 
 .mr-0 {
