@@ -1,0 +1,9 @@
+:root{
+    --min-card-title-size: 32;
+    --max-card-title-size: 48;
+    --card-title-size: calc(
+        (var(--min-card-title-size) * 1px) + 
+        (var(--max-card-title-size) - var(--min-card-title-size)) * 
+        ((100cqw - 320px) / (1920 - 320))
+        );
+}

@@ -1,10 +1,10 @@
 @import url(./reset.css);
-
+@import url(./variable.css);
 @import url(./base.css);
 
 /*除錯*/
 /* * {
-  border: 1px solid black !important;
+  outline: 1px solid black !important;
 } */
 
 /* 第1週的 */
@@ -60,13 +60,21 @@ max-width: 1320px;
     max-width: 100%;
   }
 }
-
+/*
+圖片hover放大效果
+https://www.webdesigns.com.tw/css-zoom_in.asp
+*/
 .navbar-logo {
   width: 80px;
-
+  transform:scale(1,1);
+  transition: 1s;
   @media (max-width: 768px) {
     margin: 0 0 16px 16px;
   }
+}
+
+.navbar-logo:hover{
+  transform:scale(1.2,1.2);
 }
 
 .navbar-nav {
@@ -416,17 +424,21 @@ footer .concact_info p {
   object-fit: cover;
   object-position: center center;
   height: auto/ 100%;
-  padding: 0 12px;
   @media (max-width: 768px) {
     padding: 0 0;
   }
 }
-
+/*
+參考
+1. https://muki.tw/responsive-css-font-size-utilities/
+2. https://developer.mozilla.org/zh-CN/docs/Web/CSS/clamp
+*/
 .img-card-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: clamp(var(--min-card-title-size) * 1px, var(--card-title-size), var(--max-card-title-size) * 1px);
   font-weight: 900;
   font-style: italic;
+  white-space: 0.013em;
 }
 
 .joint-container {
@@ -492,9 +504,6 @@ footer .concact_info p {
 .row {
   display: flex;
   flex-wrap: wrap;
-  /* 抵銷最左邊和最右邊的 col 多出來的 padding */
-  margin-left: -12px;
-  margin-right: -12px;
 }
 
 .col{
