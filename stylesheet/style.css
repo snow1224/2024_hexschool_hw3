@@ -299,7 +299,7 @@ footer .concact_info p {
 }
 
 .copyright {
-  margin-top: 48px;
+  padding: 48px 0;
 }
 
 .copyright ul {
@@ -563,13 +563,6 @@ footer .concact_info p {
     margin-right: 0;
   }
 }
-
-/* .mr-lg-24{
-    margin-right: 24px;
-    @media(max-width: 575px){
-      margin-right: 0;
-    }
-  } */
 
 .mb-0 {
   margin-bottom: 0px !important;
